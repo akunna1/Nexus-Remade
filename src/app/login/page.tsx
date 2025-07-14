@@ -2,15 +2,15 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
-// Register Page
-const Register = () => {
-  const [firstname, setFirstname] = useState("");
-  const [lastname, setLastname] = useState("");
+// Login Page
+const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
+  const router = useRouter();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -18,27 +18,23 @@ const Register = () => {
     setSuccess("");
 
     try {
-      const res = await fetch("http://localhost:3000/", {
+      const res = await fetch("http://localhost:3000/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ firstname, lastname, email, password }),
+        body: JSON.stringify({ email, password }),
       });
 
       if (!res.ok) {
         const data = await res.json();
-        throw new Error(data?.message || "Registration failed");
+        throw new Error(data?.message || "Error logging in!");
       }
 
-      setSuccess("User registered successfully!");
-      setFirstname("");
-      setLastname("");
-      setEmail("");
-      setPassword("");
-
-      setTimeout(() => setSuccess(""), 3000);
+      setSuccess("Login successful!");
+      setTimeout(() => {
+        router.push("/");
+      }, 2000);
     } catch (err: any) {
-      setError(err.message || "Email already in use!");
-      setTimeout(() => setError(""), 3000);
+      setError(err.message || "Error logging in!");
     }
   };
 
@@ -53,10 +49,10 @@ const Register = () => {
             Is therapy too expensive? Discover insights from others' therapy sessions. Join Nexus, the social media app dedicated to sharing therapy resources at no cost.
           </p>
 
-          <p className="text-[#2d2d2d] text-sm mb-2 mt-5">Already have an account?</p>
-          <Link href="/login">
+          <p className="text-[#2d2d2d] text-sm mb-2 mt-5">Don't have an account?</p>
+          <Link href="/">
             <button className="w-full bg-gray-700 hover:bg-gray-800 text-white py-2 px-4 rounded-xl font-semibold shadow-xl">
-              Login
+              Register
             </button>
           </Link>
         </div>
@@ -64,22 +60,6 @@ const Register = () => {
         {/* Column 2 */}
         <div className="md:w-1/2 w-full bg-white shadow-lg rounded-2xl p-8">
           <form className="flex flex-col" onSubmit={handleSubmit}>
-            <input
-              type="text"
-              placeholder="First name"
-              className="mb-4 p-3 border-2 border-gray-300 rounded-lg shadow-sm focus:outline-none focus:border-gray-500"
-              value={firstname}
-              onChange={(e) => setFirstname(e.target.value)}
-              required
-            />
-            <input
-              type="text"
-              placeholder="Last name"
-              className="mb-4 p-3 border-2 border-gray-300 rounded-lg shadow-sm focus:outline-none focus:border-gray-500"
-              value={lastname}
-              onChange={(e) => setLastname(e.target.value)}
-              required
-            />
             <input
               type="email"
               placeholder="Enter email"
@@ -100,7 +80,7 @@ const Register = () => {
               type="submit"
               className="bg-[#034a9c] hover:bg-[#022f73] text-white py-2 px-4 rounded-lg font-semibold shadow-xl"
             >
-              Register
+              Login
             </button>
             {success && <p className="text-blue-600 mt-4">{success}</p>}
             {error && <p className="text-red-600 mt-4">{error}</p>}
@@ -111,4 +91,4 @@ const Register = () => {
   );
 };
 
-export default Register;
+export default Login;

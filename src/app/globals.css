@@ -1,26 +1,50 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* Custom Scrollbar Styling for Webkit Browsers (Chrome, Safari) */
+.scrollbar-hidden::-webkit-scrollbar {
+    width: 0; /* Hides the scrollbar width */
+    height: 0; /* Hides the scrollbar height */
   }
-}
+  
+  /* Firefox */
+  .scrollbar-hidden {
+    scrollbar-width: none; /* Hides the scrollbar */
+  }
+  
+  /* For Edge and Internet Explorer */
+  .scrollbar-hidden {
+    -ms-overflow-style: none; /* Hides the scrollbar */
+  }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
+  /* Ensure dark mode styles are applied to the whole document */
+html {
+    background-color: white; /* Default background for light mode */
+  }
+  
+  html.dark {
+    background-color: #1a202c; /* Background for dark mode */
+  }
+  
+  /* Add any additional dark mode styling needed */
+  .dark .bg-white {
+    background-color: #2d3748; /* Dark mode background for white elements */
+  }
+
+  .dark .bg-gray-100 {
+    background-color: #41454e; /* Dark mode background for gray-100 elements */
+  }
+  
+  .dark .text-black {
+    color: #edf2f7; /* Dark mode text color */
+  }
+
+  .dark .text-gray-600 {
+    color: white; /* Dark mode text color */
+  }
+  
+  .dark .border-black {
+    border-color: #4a5568; /* Dark mode border color */
+  }
+  
+  
+  
