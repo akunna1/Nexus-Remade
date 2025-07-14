@@ -18,7 +18,7 @@ const Register = () => {
     setSuccess("");
 
     try {
-      const res = await fetch("http://localhost:3000/", {
+      const res = await fetch("api/register", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ firstname, lastname, email, password }),
@@ -26,7 +26,7 @@ const Register = () => {
 
       if (!res.ok) {
         const data = await res.json();
-        throw new Error(data?.message || "Registration failed");
+        throw new Error(data?.message || "Registration failed!");
       }
 
       setSuccess("User registered successfully!");
