@@ -39,11 +39,11 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-l from-gray-800 via-gray-900 to-black flex items-center justify-center">
-      <div className="bg-transparent p-12 md:flex md:flex-row flex-col w-4/5 md:w-3/4 lg:w-3/4 rounded-2xl shadow-xl">
+    <div className="min-h-screen bg-gradient-to-l from-gray-800 via-gray-900 to-black flex items-center justify-center px-4">
+      <div className="bg-transparent p-6 md:flex md:flex-row flex-col max-w-screen-lg mx-auto rounded-2xl shadow-xl w-full">
 
         {/* Column 1 */}
-        <div className="p-8 md:w-1/2 w-full flex flex-col justify-center mb-8 md:mb-0 md:mr-6 bg-[#f5f5f5] rounded-xl shadow-md">
+        <div className="w-full md:flex-1 p-6 bg-[#f5f5f5] rounded-xl shadow-md mb-6 md:mb-0 md:mr-6 flex flex-col justify-center">
           <p className="text-5xl font-bold mb-6 text-[#034a9c]">Nexus</p>
           <p className="text-[#2d2d2d] text-lg mb-4 text-left">
             Is therapy too expensive? Discover insights from others' therapy sessions. Join Nexus, the social media app dedicated to sharing therapy resources at no cost.
@@ -58,7 +58,7 @@ const Login = () => {
         </div>
 
         {/* Column 2 */}
-        <div className="md:w-1/2 w-full bg-white shadow-lg rounded-2xl p-8">
+        <div className="w-full md:flex-1 bg-white shadow-lg rounded-2xl p-6 flex flex-col">
           <form className="flex flex-col" onSubmit={handleSubmit}>
             <input
               type="email"
