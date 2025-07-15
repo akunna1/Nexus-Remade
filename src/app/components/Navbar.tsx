@@ -34,7 +34,7 @@ const Navbar = () => {
         </Link>
 
         <div className="hidden lg:flex space-x-5">
-          <Link href="/">
+          <Link href="/home">
             <MdOutlineHome
               size={24}
               className="cursor-pointer hover:text-gray-400 dark:hover:text-gray-500"

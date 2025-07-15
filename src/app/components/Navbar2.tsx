@@ -39,7 +39,7 @@ const Navbar2 = () => {
         </div>
 
         {/* Home link */}
-        <Link href="/">
+        <Link href="/home">
           <MdOutlineHome
             size={24}
             className="hover:text-gray-400 dark:hover:text-gray-500 cursor-pointer"
