@@ -86,7 +86,7 @@ const Navbar2 = () => {
 
       {/* Dropdown menu */}
       {isMenuOpen && (
-        <div className="absolute bottom-16 left-4 right-4 bg-white w-[230px] dark:bg-gray-800 shadow-xl rounded-xl p-4 z-40">
+        <div className="absolute bottom-16 left-4 right-4 bg-white w-[230px] shadow-xl rounded-xl p-4 z-40">
           <ul className="space-y-2">
             {[
               { src: "/photos/friends.png", alt: "Friends", label: "Friends" },
