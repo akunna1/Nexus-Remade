@@ -44,7 +44,7 @@ const Upload = () => {
               <span className="text-sm text-black hover:text-gray-400 focus:text-gray-400 active:text-gray-400" id="dark-text-hover">Location</span>
             </div>
           </div>
-          <button className="bg-green-600 hover:bg-green-800 focus:bg-green-800 active:bg-green-800 text-white px-3 py-1 rounded-xl">
+          <button className="bg-green-600 hover:bg-green-800 focus:bg-green-800 active:bg-green-800 text-white px-3 py-1 rounded-xl cursor-pointer">
             Upload
           </button>
         </div>
