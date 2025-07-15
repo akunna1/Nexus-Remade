@@ -101,7 +101,7 @@ const Navbar2 = () => {
               >
                 <div className="flex items-center space-x-2">
                   <img src={src} alt={alt} className="w-8 h-8 rounded-full" />
-                  <span className="text-black hover:text-gray-400 dark:hover:text-gray-500">
+                  <span className=" hover:text-gray-400 dark:hover:text-gray-500">
                     {label}
                   </span>
                 </div>
@@ -111,7 +111,7 @@ const Navbar2 = () => {
             {/* Resources */}
             <li className="border-b-2 border-gray-500 pb-2">
               <div
-                className="text-black hover:text-gray-400 dark:hover:text-gray-500 cursor-pointer"
+                className=" hover:text-gray-400 dark:hover:text-gray-500 cursor-pointer"
                 onClick={toggleResourcesMenu}
               >
                 Resources...
@@ -127,7 +127,7 @@ const Navbar2 = () => {
                     <li key={label} className="cursor-pointer">
                       <div className="flex items-center space-x-2">
                         <img src={src} alt={alt} className="w-8 h-8 rounded-full" />
-                        <span className="text-black hover:text-gray-400 dark:hover:text-gray-500">
+                        <span className=" hover:text-gray-400 dark:hover:text-gray-500">
                           {label}
                         </span>
                       </div>
@@ -140,7 +140,7 @@ const Navbar2 = () => {
             {/* Others */}
             <li>
               <div
-                className="text-black hover:text-gray-400 dark:hover:text-gray-500 cursor-pointer"
+                className=" hover:text-gray-400 dark:hover:text-gray-500 cursor-pointer"
                 onClick={toggleOthersMenu}
               >
                 Others...
@@ -155,7 +155,7 @@ const Navbar2 = () => {
                     <li key={label} className="cursor-pointer">
                       <div className="flex items-center space-x-2">
                         <img src={src} alt={alt} className="w-8 h-8 rounded-full" />
-                        <span className="text-black hover:text-gray-400 dark:hover:text-gray-500">
+                        <span className=" hover:text-gray-400 dark:hover:text-gray-500">
                           {label}
                         </span>
                       </div>
