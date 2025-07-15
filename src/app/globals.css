@@ -1,50 +1,42 @@
 @import "tailwindcss";
 
-/* Custom Scrollbar Styling for Webkit Browsers (Chrome, Safari) */
+/* Hide scrollbars in all major browsers */
+.scrollbar-hidden {
+  -ms-overflow-style: none; /* IE/Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
 .scrollbar-hidden::-webkit-scrollbar {
-    width: 0; /* Hides the scrollbar width */
-    height: 0; /* Hides the scrollbar height */
-  }
-  
-  /* Firefox */
-  .scrollbar-hidden {
-    scrollbar-width: none; /* Hides the scrollbar */
-  }
-  
-  /* For Edge and Internet Explorer */
-  .scrollbar-hidden {
-    -ms-overflow-style: none; /* Hides the scrollbar */
-  }
+  width: 0;
+  height: 0;
+}
 
-  /* Ensure dark mode styles are applied to the whole document */
+/* Light/dark HTML bg fallback */
 html {
-    background-color: white; /* Default background for light mode */
-  }
-  
-  html.dark {
-    background-color: #1a202c; /* Background for dark mode */
-  }
-  
-  /* Add any additional dark mode styling needed */
-  .dark .bg-white {
-    background-color: #2d3748; /* Dark mode background for white elements */
-  }
+  background-color: white;
+}
 
-  .dark .bg-gray-100 {
-    background-color: #41454e; /* Dark mode background for gray-100 elements */
-  }
-  
-  .dark .text-black {
-    color: #edf2f7; /* Dark mode text color */
-  }
+html.dark {
+  background-color: #1a202c;
+}
 
-  .dark .text-gray-600 {
-    color: white; /* Dark mode text color */
-  }
-  
-  .dark .border-black {
-    border-color: #4a5568; /* Dark mode border color */
-  }
-  
-  
-  
+/* OPTIONAL: Dark overrides — only if not using Tailwind's dark: variants */
+.dark .bg-white {
+  background-color: #2d3748;
+}
+
+.dark .bg-gray-100 {
+  background-color: #41454e;
+}
+
+.dark .text-black {
+  color: #edf2f7;
+}
+
+.dark .text-gray-600 {
+  color: white;
+}
+
+.dark .border-black {
+  border-color: #4a5568;
+}

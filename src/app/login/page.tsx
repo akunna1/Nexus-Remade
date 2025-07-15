@@ -3,8 +3,8 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { supabase } from "@/lib/supabaseClient"; // <-- import supabase client
 
-// Login Page
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -17,38 +17,31 @@ const Login = () => {
     setError("");
     setSuccess("");
 
-    try {
-      const res = await fetch("http://localhost:3000/login", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, password }),
-      });
+    const { data, error } = await supabase.auth.signInWithPassword({
+      email,
+      password,
+    });
 
-      if (!res.ok) {
-        const data = await res.json();
-        throw new Error(data?.message || "Error logging in!");
-      }
-
-      setSuccess("Login successful!");
-      setTimeout(() => {
-        router.push("/");
-      }, 2000);
-    } catch (err: any) {
-      setError(err.message || "Error logging in!");
+    if (error) {
+      setError(error.message);
+      return;
     }
+
+    setSuccess("Login successful!");
+    setTimeout(() => {
+      router.push("/home");
+    }, 2000);
   };
 
   return (
     <div className="min-h-screen bg-gradient-to-l from-gray-800 via-gray-900 to-black flex items-center justify-center px-4">
       <div className="bg-transparent p-6 md:flex md:flex-row flex-col max-w-screen-lg mx-auto rounded-2xl shadow-xl w-full">
-
         {/* Column 1 */}
         <div className="w-full md:flex-1 p-6 bg-[#f5f5f5] rounded-xl shadow-md mb-6 md:mb-0 md:mr-6 flex flex-col justify-center">
           <p className="text-5xl font-bold mb-6 text-[#034a9c]">Nexus</p>
           <p className="text-[#2d2d2d] text-lg mb-4 text-left">
             Is therapy too expensive? Discover insights from others' therapy sessions. Join Nexus, the social media app dedicated to sharing therapy resources at no cost.
           </p>
-
           <p className="text-[#2d2d2d] text-sm mb-2 mt-5">Don't have an account?</p>
           <Link href="/">
             <button className="w-full bg-gray-700 hover:bg-gray-800 text-white py-2 px-4 rounded-xl font-semibold shadow-xl">

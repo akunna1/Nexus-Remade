@@ -34,7 +34,7 @@ const Register = () => {
       return;
     }
 
-    setSuccess("Account created! Check your email for confirmation.");
+    setSuccess("Account created! Check your email for confirmation and then login.");
     setFirstname("");
     setLastname("");
     setEmail("");
