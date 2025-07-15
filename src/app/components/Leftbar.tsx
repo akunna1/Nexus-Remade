@@ -17,7 +17,7 @@ const Leftbar = () => {
             />
           </Link>
           <Link href="/profile/123">
-            <span className="hidden md:inline text-sm text-black dark:text-white cursor-pointer hover:text-gray-500 dark:hover:text-gray-300">
+            <span className="hidden md:inline text-sm text-black cursor-pointer hover:text-gray-400 dark:hover:text-gray-500">
               Astra Quanta
             </span>
           </Link>
@@ -33,13 +33,13 @@ const Leftbar = () => {
         ].map(({ src, alt, label }) => (
           <div key={label} className="flex items-center space-x-2">
             <img src={src} alt={alt} className="w-8 h-8 rounded-full cursor-pointer" />
-            <span className="hidden md:inline text-sm text-black dark:text-white cursor-pointer hover:text-gray-500 dark:hover:text-gray-300">
+            <span className="hidden md:inline text-sm text-black cursor-pointer hover:text-gray-400 dark:hover:text-gray-500">
               {label}
             </span>
           </div>
         ))}
 
-        <div className="border-t-2 border-t-gray-200 dark:border-t-gray-700 text-xs text-black dark:text-white">
+        <div className="border-t-2 border-t-gray-200 dark:border-t-gray-700 text-xs text-black">
           <div className="mt-2 mb-2">Resources</div>
         </div>
 
@@ -51,13 +51,13 @@ const Leftbar = () => {
         ].map(({ src, alt, label }) => (
           <div key={label} className="flex items-center space-x-2">
             <img src={src} alt={alt} className="w-8 h-8 rounded-full cursor-pointer" />
-            <span className="hidden md:inline text-sm text-black dark:text-white cursor-pointer hover:text-gray-500 dark:hover:text-gray-300">
+            <span className="hidden md:inline text-sm text-black cursor-pointer hover:text-gray-400 dark:hover:text-gray-500">
               {label}
             </span>
           </div>
         ))}
 
-        <div className="border-t-2 border-t-gray-200 dark:border-t-gray-700 text-xs text-black dark:text-white">
+        <div className="border-t-2 border-t-gray-200 dark:border-t-gray-700 text-xs text-black">
           <div className="mt-2 mb-2">Others</div>
         </div>
 
@@ -68,7 +68,7 @@ const Leftbar = () => {
         ].map(({ src, alt, label }) => (
           <div key={label} className="flex items-center space-x-2">
             <img src={src} alt={alt} className="w-8 h-8 rounded-full cursor-pointer" />
-            <span className="hidden md:inline text-sm text-black dark:text-white cursor-pointer hover:text-gray-500 dark:hover:text-gray-300">
+            <span className="hidden md:inline text-sm text-black cursor-pointer hover:text-gray-400 dark:hover:text-gray-500">
               {label}
             </span>
           </div>
