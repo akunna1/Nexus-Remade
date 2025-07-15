@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const Leftbar = () => {
   return (
-    <div className="shadow-xl rounded-b-xl sticky top-0 xl:h-screen md:w-auto w-full overflow-y-auto scrollbar-hidden">
+    <div className="shadow-xl bg-white text-black rounded-b-xl sticky top-0 xl:h-screen md:w-auto w-full overflow-y-auto scrollbar-hidden">
       <div className="space-y-3 p-5">
         {/* User profile */}
         <div className="flex items-center space-x-2">

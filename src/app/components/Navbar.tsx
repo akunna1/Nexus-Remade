@@ -23,12 +23,12 @@ const Navbar = () => {
   const toggleTheme = () => setIsDarkMode((prev) => !prev);
 
   return (
-    <div className="bg-white text-black dark:bg-gray-900 dark:text-white flex items-center justify-between p-4 shadow-lg z-50 sticky top-0">
+    <div className="bg-white text-black flex items-center justify-between p-4 shadow-lg z-50 sticky top-0">
       {/* Left section */}
       <div className="flex items-center space-x-6">
         <Link
           href="/"
-          className="text-3xl font-bold text-[#034a9c] dark:text-white hover:text-[#022f73] dark:hover:text-[#022f73]"
+          className="text-3xl font-bold text-[#034a9c] hover:text-[#022f73]"
         >
           Nexus
         </Link>
@@ -37,27 +37,27 @@ const Navbar = () => {
           <Link href="/">
             <MdOutlineHome
               size={24}
-              className="cursor-pointer hover:text-gray-500 dark:hover:text-gray-300"
+              className="cursor-pointer hover:text-gray-400 dark:hover:text-gray-500"
             />
           </Link>
 
           {isDarkMode ? (
             <IoSunnyOutline
               size={24}
-              className="cursor-pointer hover:text-gray-500 dark:hover:text-gray-300"
+              className="cursor-pointer hover:text-gray-400 dark:hover:text-gray-500"
               onClick={toggleTheme}
             />
           ) : (
             <IoMoonOutline
               size={24}
-              className="cursor-pointer hover:text-gray-500 dark:hover:text-gray-300"
+              className="cursor-pointer hover:text-gray-400 dark:hover:text-gray-500"
               onClick={toggleTheme}
             />
           )}
 
           <BsGrid
             size={24}
-            className="cursor-pointer hover:text-gray-500 dark:hover:text-gray-300"
+            className="cursor-pointer hover:text-gray-400 dark:hover:text-gray-500"
           />
         </div>
       </div>
@@ -67,11 +67,11 @@ const Navbar = () => {
         <input
           type="text"
           placeholder="Search..."
-          className="p-2 pl-10 rounded-lg border-2 border-black dark:border-gray-700 bg-white dark:bg-gray-800 text-black dark:text-white placeholder-gray-400 dark:placeholder-gray-500 w-full"
+          className="p-2 pl-10 rounded-lg border-2 border-black dark:border-gray-700 placeholder-gray-400 dark:placeholder-gray-500 w-full"
         />
         <IoIosSearch
           size={24}
-          className="absolute left-3 text-black dark:text-white"
+          className="absolute left-3"
         />
       </div>
 
@@ -81,7 +81,7 @@ const Navbar = () => {
         <div className="relative cursor-pointer">
           <FaRegUser
             size={20}
-            className="hover:text-gray-500 dark:hover:text-gray-300"
+            className="hover:text-gray-400 dark:hover:text-gray-500"
           />
           <span className="w-[15px] h-[15px] bg-red-500 rounded-full text-white absolute top-[-7px] right-[-5px] flex items-center justify-center text-xs">
             3
@@ -90,7 +90,7 @@ const Navbar = () => {
         <div className="relative cursor-pointer">
           <FaRegEnvelope
             size={20}
-            className="hover:text-gray-500 dark:hover:text-gray-300"
+            className="hover:text-gray-400 dark:hover:text-gray-500"
           />
           <span className="w-[15px] h-[15px] bg-red-500 rounded-full text-white absolute top-[-7px] right-[-5px] flex items-center justify-center text-xs">
             5
@@ -99,7 +99,7 @@ const Navbar = () => {
         <div className="relative cursor-pointer">
           <FaRegBell
             size={20}
-            className="hover:text-gray-500 dark:hover:text-gray-300"
+            className="hover:text-gray-400 dark:hover:text-gray-500"
           />
           <span className="w-[15px] h-[15px] bg-red-500 rounded-full text-white absolute top-[-7px] right-[-5px] flex items-center justify-center text-xs">
             7
@@ -117,7 +117,7 @@ const Navbar = () => {
           </Link>
           <Link
             href="/profile/123"
-            className="hidden lg:inline cursor-pointer hover:text-gray-500 dark:hover:text-gray-300"
+            className="hidden lg:inline cursor-pointer hover:text-gray-400 dark:hover:text-gray-500"
           >
             Astra Quanta
           </Link>

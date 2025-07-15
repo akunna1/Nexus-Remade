@@ -17,10 +17,10 @@ html {
 }
 
 html.dark {
-  background-color: #1a202c;
+  background-color: #1a202c; /* same as gray-900 */
 }
 
-/* OPTIONAL: Dark overrides — only if not using Tailwind's dark: variants */
+/* Dark overrides — only if not using Tailwind's dark: variants */
 .dark .bg-white {
   background-color: #2d3748;
 }
@@ -39,4 +39,8 @@ html.dark {
 
 .dark .border-black {
   border-color: #4a5568;
+}
+
+.dark .text-black {
+  color: white;
 }
