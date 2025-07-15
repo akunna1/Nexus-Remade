@@ -24,7 +24,7 @@ const Rightbar = () => {
                   alt={name}
                   className="w-10 h-10 rounded-full object-cover cursor-pointer"
                 />
-                <span className="font-medium text-black dark:text-white cursor-pointer hover:text-gray-500">
+                <span className="font-medium text-black cursor-pointer hover:text-gray-400" id="dark-text-hover">
                   {name}
                 </span>
               </div>
@@ -81,7 +81,7 @@ const Rightbar = () => {
                   className="w-10 h-10 rounded-full object-cover cursor-pointer"
                 />
                 <p>
-                  <span className="font-medium text-black dark:text-white cursor-pointer hover:text-gray-500">
+                  <span className="font-medium text-black cursor-pointer hover:text-gray-400" id="dark-text-hover">
                     {name}{" "}
                   </span>
                   <span className="text-gray-500">{action}</span>
@@ -115,7 +115,7 @@ const Rightbar = () => {
                   className="w-10 h-10 rounded-full object-cover cursor-pointer"
                 />
                 <div className="absolute top-0 left-7 w-3 h-3 rounded-full bg-lime-500" />
-                <span className="font-medium text-black dark:text-white cursor-pointer hover:text-gray-500">
+                <span className="font-medium text-black cursor-pointer hover:text-gray-400" id="dark-text-hover">
                   {name}
                 </span>
               </div>

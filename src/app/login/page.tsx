@@ -27,7 +27,7 @@ const Login = () => {
       return;
     }
 
-    setSuccess("Login successful!");
+    setSuccess("Login successful! Redirecting...");
     setTimeout(() => {
       router.push("/home");
     }, 2000);

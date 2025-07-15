@@ -44,3 +44,7 @@ html.dark {
 .dark .text-black {
   color: white;
 }
+
+.dark #dark-text-hover:hover {
+  color: #6B7280; /* Tailwind gray-500 */
+}

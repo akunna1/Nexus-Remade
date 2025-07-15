@@ -27,14 +27,14 @@ const Navbar2 = () => {
   const toggleOthersMenu = () => setIsOthersOpen((prev) => !prev);
 
   return (
-    <div className="lg:hidden bg-white text-black shadow-xl flex justify-between items-center p-4 fixed bottom-0 left-0 right-0 z-50">
+    <div className="lg:hidden bg-white text-black shadow-lg flex justify-between items-center p-4 fixed bottom-0 left-0 right-0 z-50">
       <div className="flex items-center space-x-4">
         {/* Menu toggle */}
         <div onClick={toggleMenu} className="cursor-pointer select-none">
           {isMenuOpen ? (
-            <IoClose size={24} className="hover:text-gray-400 dark:hover:text-gray-500" />
+            <IoClose size={24} className="hover:text-gray-400" />
           ) : (
-            <FaBars size={24} className="hover:text-gray-400 dark:hover:text-gray-500" />
+            <FaBars size={24} className="hover:text-gray-400" id="dark-text-hover"  />
           )}
         </div>
 
@@ -42,7 +42,7 @@ const Navbar2 = () => {
         <Link href="/home">
           <MdOutlineHome
             size={24}
-            className="hover:text-gray-400 dark:hover:text-gray-500 cursor-pointer"
+            className="hover:text-gray-400  cursor-pointer"
           />
         </Link>
 
@@ -50,20 +50,20 @@ const Navbar2 = () => {
         {isDarkMode ? (
           <IoSunnyOutline
             size={24}
-            className="hover:text-gray-400 dark:hover:text-gray-500 cursor-pointer"
+            className="hover:text-gray-400  cursor-pointer"
             onClick={toggleTheme}
           />
         ) : (
           <IoMoonOutline
             size={24}
-            className="hover:text-gray-400 dark:hover:text-gray-500 cursor-pointer"
+            className="hover:text-gray-400  cursor-pointer"
             onClick={toggleTheme}
           />
         )}
 
         <BsGrid
           size={24}
-          className="hover:text-gray-400 dark:hover:text-gray-500 cursor-pointer"
+          className="hover:text-gray-400  cursor-pointer"
         />
       </div>
 
@@ -78,7 +78,7 @@ const Navbar2 = () => {
         </Link>
         <Link
           href="/profile/123"
-          className="hover:text-gray-400 dark:hover:text-gray-500 cursor-pointer"
+          className="hover:text-gray-400  cursor-pointer"
         >
           Astra Quanta
         </Link>
@@ -101,7 +101,7 @@ const Navbar2 = () => {
               >
                 <div className="flex items-center space-x-2">
                   <img src={src} alt={alt} className="w-8 h-8 rounded-full" />
-                  <span className=" hover:text-gray-400 dark:hover:text-gray-500">
+                  <span className=" hover:text-gray-400" id="dark-text-hover" >
                     {label}
                   </span>
                 </div>
@@ -111,7 +111,7 @@ const Navbar2 = () => {
             {/* Resources */}
             <li className="border-b-2 border-gray-500 pb-2">
               <div
-                className=" hover:text-gray-400 dark:hover:text-gray-500 cursor-pointer"
+                className=" hover:text-gray-400  cursor-pointer"
                 onClick={toggleResourcesMenu}
               >
                 Resources...
@@ -127,7 +127,7 @@ const Navbar2 = () => {
                     <li key={label} className="cursor-pointer">
                       <div className="flex items-center space-x-2">
                         <img src={src} alt={alt} className="w-8 h-8 rounded-full" />
-                        <span className=" hover:text-gray-400 dark:hover:text-gray-500">
+                        <span className=" hover:text-gray-400" id="dark-text-hover" >
                           {label}
                         </span>
                       </div>
@@ -140,7 +140,7 @@ const Navbar2 = () => {
             {/* Others */}
             <li>
               <div
-                className=" hover:text-gray-400 dark:hover:text-gray-500 cursor-pointer"
+                className=" hover:text-gray-400  cursor-pointer"
                 onClick={toggleOthersMenu}
               >
                 Others...
@@ -155,7 +155,7 @@ const Navbar2 = () => {
                     <li key={label} className="cursor-pointer">
                       <div className="flex items-center space-x-2">
                         <img src={src} alt={alt} className="w-8 h-8 rounded-full" />
-                        <span className=" hover:text-gray-400 dark:hover:text-gray-500">
+                        <span className=" hover:text-gray-400" id="dark-text-hover" >
                           {label}
                         </span>
                       </div>

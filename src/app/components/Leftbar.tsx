@@ -1,7 +1,7 @@
 "use client";
 
-import React from "react";
-import Link from "next/link";
+import React from"react";
+import Link from"next/link";
 
 const Leftbar = () => {
   return (
@@ -17,7 +17,7 @@ const Leftbar = () => {
             />
           </Link>
           <Link href="/profile/123">
-            <span className="hidden md:inline text-sm text-black cursor-pointer hover:text-gray-400 dark:hover:text-gray-500">
+            <span className="hidden md:inline text-sm text-black cursor-pointer hover:text-gray-400" id="dark-text-hover">
               Astra Quanta
             </span>
           </Link>
@@ -25,15 +25,15 @@ const Leftbar = () => {
 
         {/* Other items */}
         {[
-          { src: "/photos/friends.png", alt: "Friends", label: "Friends" },
-          { src: "/photos/group.png", alt: "Group", label: "Groups" },
-          { src: "/photos/messages.png", alt: "Messages", label: "Messages" },
-          { src: "/photos/gallery.png", alt: "Gallery", label: "Gallery" },
-          { src: "/photos/videos.png", alt: "Videos", label: "Videos" },
+          { src:"/photos/friends.png", alt:"Friends", label:"Friends" },
+          { src:"/photos/group.png", alt:"Group", label:"Groups" },
+          { src:"/photos/messages.png", alt:"Messages", label:"Messages" },
+          { src:"/photos/gallery.png", alt:"Gallery", label:"Gallery" },
+          { src:"/photos/videos.png", alt:"Videos", label:"Videos" },
         ].map(({ src, alt, label }) => (
           <div key={label} className="flex items-center space-x-2">
             <img src={src} alt={alt} className="w-8 h-8 rounded-full cursor-pointer" />
-            <span className="hidden md:inline text-sm text-black cursor-pointer hover:text-gray-400 dark:hover:text-gray-500">
+            <span className="hidden md:inline text-sm text-black cursor-pointer hover:text-gray-400" id="dark-text-hover">
               {label}
             </span>
           </div>
@@ -44,14 +44,14 @@ const Leftbar = () => {
         </div>
 
         {[
-          { src: "/photos/books.png", alt: "Books", label: "Books" },
-          { src: "/photos/quotes.png", alt: "Quotes", label: "Quotes" },
-          { src: "/photos/music.png", alt: "Music", label: "Music" },
-          { src: "/photos/youtube.png", alt: "Clips", label: "Clips" },
+          { src:"/photos/books.png", alt:"Books", label:"Books" },
+          { src:"/photos/quotes.png", alt:"Quotes", label:"Quotes" },
+          { src:"/photos/music.png", alt:"Music", label:"Music" },
+          { src:"/photos/youtube.png", alt:"Clips", label:"Clips" },
         ].map(({ src, alt, label }) => (
           <div key={label} className="flex items-center space-x-2">
             <img src={src} alt={alt} className="w-8 h-8 rounded-full cursor-pointer" />
-            <span className="hidden md:inline text-sm text-black cursor-pointer hover:text-gray-400 dark:hover:text-gray-500">
+            <span className="hidden md:inline text-sm text-black cursor-pointer hover:text-gray-400" id="dark-text-hover">
               {label}
             </span>
           </div>
@@ -62,13 +62,13 @@ const Leftbar = () => {
         </div>
 
         {[
-          { src: "/photos/funds.png", alt: "Fundraiser", label: "Fundraiser" },
-          { src: "/photos/market.png", alt: "Marketplace", label: "Marketplace" },
-          { src: "/photos/courses.png", alt: "Courses", label: "Courses" },
+          { src:"/photos/funds.png", alt:"Fundraiser", label:"Fundraiser" },
+          { src:"/photos/market.png", alt:"Marketplace", label:"Marketplace" },
+          { src:"/photos/courses.png", alt:"Courses", label:"Courses" },
         ].map(({ src, alt, label }) => (
           <div key={label} className="flex items-center space-x-2">
             <img src={src} alt={alt} className="w-8 h-8 rounded-full cursor-pointer" />
-            <span className="hidden md:inline text-sm text-black cursor-pointer hover:text-gray-400 dark:hover:text-gray-500">
+            <span className="hidden md:inline text-sm text-black cursor-pointer hover:text-gray-400" id="dark-text-hover">
               {label}
             </span>
           </div>
