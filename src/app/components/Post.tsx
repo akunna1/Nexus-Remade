@@ -54,7 +54,7 @@ const Post: React.FC<PostProps> = ({ post }) => {
               className="w-10 h-10 rounded-full mr-3 cursor-pointer"
             />
             <div className="details">
-              <span className="text-lg font-semibold text-black hover:text-gray-500 cursor-pointer" id="dark-text-hover">
+              <span className="text-lg font-semibold text-black hover:text-gray-500 focus:text-gray-500 active:text-gray-500 cursor-pointer" id="dark-text-hover">
                 {post.name}
               </span>
               <span className="date text-gray-500 text-sm block">{post.timeAgo}</span>

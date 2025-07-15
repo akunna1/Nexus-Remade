@@ -28,7 +28,7 @@ const Comments: React.FC<CommentsProps> = ({ comments }) => {
           className="flex-1 p-2 rounded-md border-2 border-gray-700 bg-white text-black"
           aria-label="Write a comment"
         />
-        <button className="py-1 px-3 bg-[#034a9c] hover:bg-[#022f73] text-white rounded-xl">
+        <button className="py-1 px-3 bg-[#034a9c] hover:bg-[#022f73] focus:bg-[#022f73] active:bg-[#022f73] text-white rounded-xl cursor-pointer">
           Send
         </button>
       </div>
@@ -41,7 +41,7 @@ const Comments: React.FC<CommentsProps> = ({ comments }) => {
             className="w-10 h-10 rounded-full cursor-pointer"
           />
           <div className="bg-gray-100 p-3 rounded-md flex-1">
-            <span className="font-semibold cursor-pointer text-black hover:text-gray-400" id="dark-text-hover">
+            <span className="font-semibold cursor-pointer text-black hover:text-gray-400 focus:text-gray-400 active:text-gray-400" id="dark-text-hover">
               {comment.name}
             </span>
             <p className="text-sm text-black">{comment.desc}</p>
