@@ -32,7 +32,7 @@ const Rightbar = () => {
                 <button className="px-3 py-1 text-white bg-[#034a9c] hover:bg-[#022f73] focus:bg-[#022f73] active:bg-[#022f73] rounded-xl">
                   Follow
                 </button>
-                <button className="px-3 py-1 text-white bg-red-600 hover:bg-[#a00404] focus:bg-[#a00404] active:bg-[#a00404]rounded-xl">
+                <button className="px-3 py-1 text-white bg-red-600 hover:bg-[#a00404] focus:bg-[#a00404] active:bg-[#a00404] rounded-xl">
                   Dismiss
                 </button>
               </div>

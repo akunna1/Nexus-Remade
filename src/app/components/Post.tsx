@@ -60,7 +60,7 @@ const Post: React.FC<PostProps> = ({ post }) => {
               <span className="date text-gray-500 text-sm block">{post.timeAgo}</span>
             </div>
           </div>
-          <BsThreeDots className="text-gray-500 dark:text-gray-300" />
+          <BsThreeDots className="text-gray-500 hover:text-gray-600 focus:text-gray-600 active:text-gray-600 cursor-pointer" />
         </div>
 
         <div className="content mb-4">
@@ -69,15 +69,15 @@ const Post: React.FC<PostProps> = ({ post }) => {
         </div>
 
         <div className="info flex justify-between text-gray-600">
-          <div className="item flex items-center space-x-1 cursor-pointer" onClick={handleLikeClick}>
+          <div className="item flex items-center space-x-1 cursor-pointer hover:text-gray-400 focus:text-gray-400 active:text-gray-400" onClick={handleLikeClick}>
             {liked ? <AiFillHeart className="text-red-500" /> : <AiOutlineHeart />}
             <span>{likesCount} Likes</span>
           </div>
-          <div className="item flex items-center space-x-1 cursor-pointer" onClick={() => setCommentOpen(!commentOpen)}>
+          <div className="item flex items-center space-x-1 cursor-pointer hover:text-gray-400 focus:text-gray-400 active:text-gray-400" onClick={() => setCommentOpen(!commentOpen)}>
             <FaRegCommentDots />
             <span>{post.comments.length} Comments</span>
           </div>
-          <div className="item flex items-center space-x-1 cursor-pointer">
+          <div className="item flex items-center space-x-1 cursor-pointer hover:text-gray-400 focus:text-gray-400 active:text-gray-400">
             <RiShareForwardLine />
             <span>Share</span>
           </div>
