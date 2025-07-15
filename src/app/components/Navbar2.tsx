@@ -8,20 +8,38 @@ import { BsGrid } from "react-icons/bs";
 import { FaBars } from "react-icons/fa";
 
 const Navbar2 = () => {
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState<undefined | boolean>(undefined);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isResourcesOpen, setIsResourcesOpen] = useState(false);
   const [isOthersOpen, setIsOthersOpen] = useState(false);
 
   useEffect(() => {
-    if (isDarkMode) {
+    // Runs on mount
+    const savedTheme = localStorage.getItem("theme");
+    const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+    if (savedTheme === "dark" || (!savedTheme && systemPrefersDark)) {
       document.documentElement.classList.add("dark");
+      setIsDarkMode(true);
     } else {
       document.documentElement.classList.remove("dark");
+      setIsDarkMode(false);
     }
-  }, [isDarkMode]);
+  }, []);
 
-  const toggleTheme = () => setIsDarkMode((prev) => !prev);
+  const toggleTheme = () => {
+    const newTheme = !isDarkMode;
+    setIsDarkMode(newTheme);
+
+    if (newTheme) {
+      document.documentElement.classList.add("dark");
+      localStorage.setItem("theme", "dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+      localStorage.setItem("theme", "light");
+    }
+  };
+
   const toggleMenu = () => setIsMenuOpen((prev) => !prev);
   const toggleResourcesMenu = () => setIsResourcesOpen((prev) => !prev);
   const toggleOthersMenu = () => setIsOthersOpen((prev) => !prev);
@@ -29,45 +47,41 @@ const Navbar2 = () => {
   return (
     <div className="lg:hidden bg-white text-black shadow-lg flex justify-between items-center p-4 fixed bottom-0 left-0 right-0 z-50">
       <div className="flex items-center space-x-4">
-        {/* Menu toggle */}
         <div onClick={toggleMenu} className="cursor-pointer select-none">
           {isMenuOpen ? (
             <IoClose size={24} className="hover:text-gray-400" />
           ) : (
-            <FaBars size={24} className="hover:text-gray-400" id="dark-text-hover"  />
+            <FaBars size={24} className="hover:text-gray-400" id="dark-text-hover" />
           )}
         </div>
 
-        {/* Home link */}
         <Link href="/home">
           <MdOutlineHome
             size={24}
-            className="hover:text-gray-400  cursor-pointer"
+            className="hover:text-gray-400 cursor-pointer"
           />
         </Link>
 
-        {/* Theme toggle */}
-        {isDarkMode ? (
-          <IoSunnyOutline
-            size={24}
-            className="hover:text-gray-400  cursor-pointer"
-            onClick={toggleTheme}
-          />
-        ) : (
-          <IoMoonOutline
-            size={24}
-            className="hover:text-gray-400  cursor-pointer"
-            onClick={toggleTheme}
-          />
+        {/* Render toggle only when loaded */}
+        {isDarkMode !== undefined && (
+          isDarkMode ? (
+            <IoSunnyOutline
+              size={24}
+              className="hover:text-gray-400 cursor-pointer"
+              onClick={toggleTheme}
+            />
+          ) : (
+            <IoMoonOutline
+              size={24}
+              className="hover:text-gray-400 cursor-pointer"
+              onClick={toggleTheme}
+            />
+          )
         )}
 
-        <BsGrid
-          size={24}
-          className="hover:text-gray-400  cursor-pointer"
-        />
+        <BsGrid size={24} className="hover:text-gray-400 cursor-pointer" />
       </div>
 
-      {/* Profile */}
       <div className="flex items-center space-x-2">
         <Link href="/profile">
           <img
@@ -76,15 +90,11 @@ const Navbar2 = () => {
             className="w-8 h-8 rounded-full cursor-pointer"
           />
         </Link>
-        <Link
-          href="/profile"
-          className="hover:text-gray-400  cursor-pointer"
-        >
+        <Link href="/profile" className="hover:text-gray-400 cursor-pointer">
           Astra Quanta
         </Link>
       </div>
 
-      {/* Dropdown menu */}
       {isMenuOpen && (
         <div className="absolute bottom-16 left-4 right-4 bg-white w-[230px] shadow-xl rounded-xl p-4 z-40">
           <ul className="space-y-2">
@@ -95,23 +105,19 @@ const Navbar2 = () => {
               { src: "/photos/gallery.png", alt: "Gallery", label: "Gallery" },
               { src: "/photos/videos.png", alt: "Videos", label: "Videos" },
             ].map(({ src, alt, label }) => (
-              <li
-                key={label}
-                className="border-b-2 border-gray-500 pb-2 cursor-pointer"
-              >
+              <li key={label} className="border-b-2 border-gray-500 pb-2 cursor-pointer">
                 <div className="flex items-center space-x-2">
                   <img src={src} alt={alt} className="w-8 h-8 rounded-full" />
-                  <span className=" hover:text-gray-400" id="dark-text-hover" >
+                  <span className="hover:text-gray-400" id="dark-text-hover">
                     {label}
                   </span>
                 </div>
               </li>
             ))}
 
-            {/* Resources */}
             <li className="border-b-2 border-gray-500 pb-2">
               <div
-                className=" hover:text-gray-400  cursor-pointer"
+                className="hover:text-gray-400 cursor-pointer"
                 onClick={toggleResourcesMenu}
               >
                 Resources...
@@ -127,7 +133,7 @@ const Navbar2 = () => {
                     <li key={label} className="cursor-pointer">
                       <div className="flex items-center space-x-2">
                         <img src={src} alt={alt} className="w-8 h-8 rounded-full" />
-                        <span className=" hover:text-gray-400" id="dark-text-hover" >
+                        <span className="hover:text-gray-400" id="dark-text-hover">
                           {label}
                         </span>
                       </div>
@@ -137,10 +143,9 @@ const Navbar2 = () => {
               )}
             </li>
 
-            {/* Others */}
             <li>
               <div
-                className=" hover:text-gray-400  cursor-pointer"
+                className="hover:text-gray-400 cursor-pointer"
                 onClick={toggleOthersMenu}
               >
                 Others...
@@ -155,7 +160,7 @@ const Navbar2 = () => {
                     <li key={label} className="cursor-pointer">
                       <div className="flex items-center space-x-2">
                         <img src={src} alt={alt} className="w-8 h-8 rounded-full" />
-                        <span className=" hover:text-gray-400" id="dark-text-hover" >
+                        <span className="hover:text-gray-400" id="dark-text-hover">
                           {label}
                         </span>
                       </div>

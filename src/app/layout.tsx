@@ -26,6 +26,19 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              try {
+                if (localStorage.theme === 'dark' || 
+                    (!localStorage.theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                  document.documentElement.classList.add('dark');
+                }
+              } catch(_) {}
+            `,
+          }}
+        />
+        
         {/* Favicon */}
         <link rel="icon" href="/photos/logo.png" type="image/png" />
       </head>
