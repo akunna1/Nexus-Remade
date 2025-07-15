@@ -27,7 +27,7 @@ const Navbar = () => {
       {/* Left section */}
       <div className="flex items-center space-x-6">
         <Link
-          href="/"
+          href="/home"
           className="text-3xl font-bold text-[#034a9c] hover:text-[#022f73]"
         >
           Nexus
