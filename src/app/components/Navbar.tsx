@@ -44,7 +44,7 @@ const Navbar = () => {
       <div className="flex items-center space-x-6">
         <Link
           href="/home"
-          className="text-3xl font-bold text-[#034a9c] hover:text-[#022f73]"
+          className="text-3xl font-bold text-[#034a9c] hover:text-[#022f73] focus:text-gray-[#022f73] active:text-[#022f73]"
         >
           Nexus
         </Link>
@@ -53,7 +53,7 @@ const Navbar = () => {
           <Link href="/home">
             <MdOutlineHome
               size={24}
-              className="cursor-pointer hover:text-gray-400"
+              className="cursor-pointer hover:text-gray-400 focus:text-gray-400 active:text-gray-400"
               id="dark-text-hover"
             />
           </Link>
@@ -62,14 +62,14 @@ const Navbar = () => {
             isDarkMode ? (
               <IoSunnyOutline
                 size={24}
-                className="cursor-pointer hover:text-gray-400"
+                className="cursor-pointer hover:text-gray-400 focus:text-gray-400 active:text-gray-400"
                 id="dark-text-hover"
                 onClick={toggleTheme}
               />
             ) : (
               <IoMoonOutline
                 size={24}
-                className="cursor-pointer hover:text-gray-400"
+                className="cursor-pointer hover:text-gray-400 focus:text-gray-400 active:text-gray-400"
                 id="dark-text-hover"
                 onClick={toggleTheme}
               />
@@ -78,7 +78,7 @@ const Navbar = () => {
 
           <BsGrid
             size={24}
-            className="cursor-pointer hover:text-gray-400"
+            className="cursor-pointer hover:text-gray-400 focus:text-gray-400 active:text-gray-400"
             id="dark-text-hover"
           />
         </div>
@@ -97,19 +97,19 @@ const Navbar = () => {
       {/* Right section */}
       <div className="flex items-center space-x-5 mr-2 relative">
         <div className="relative cursor-pointer">
-          <FaRegUser size={20} className="hover:text-gray-400" id="dark-text-hover" />
+          <FaRegUser size={20} className="hover:text-gray-400 focus:text-gray-400 active:text-gray-400" id="dark-text-hover" />
           <span className="w-[15px] h-[15px] bg-red-500 rounded-full text-white absolute top-[-7px] right-[-5px] flex items-center justify-center text-xs">
             3
           </span>
         </div>
         <div className="relative cursor-pointer">
-          <FaRegEnvelope size={20} className="hover:text-gray-400" id="dark-text-hover" />
+          <FaRegEnvelope size={20} className="hover:text-gray-400 focus:text-gray-400 active:text-gray-400" id="dark-text-hover" />
           <span className="w-[15px] h-[15px] bg-red-500 rounded-full text-white absolute top-[-7px] right-[-5px] flex items-center justify-center text-xs">
             5
           </span>
         </div>
         <div className="relative cursor-pointer">
-          <FaRegBell size={20} className="hover:text-gray-400" id="dark-text-hover" />
+          <FaRegBell size={20} className="hover:text-gray-400 focus:text-gray-400 active:text-gray-400" id="dark-text-hover" />
           <span className="w-[15px] h-[15px] bg-red-500 rounded-full text-white absolute top-[-7px] right-[-5px] flex items-center justify-center text-xs">
             7
           </span>
@@ -126,7 +126,7 @@ const Navbar = () => {
           </Link>
           <Link
             href="/profile"
-            className="hidden lg:inline cursor-pointer hover:text-gray-400"
+            className="hidden lg:inline cursor-pointer hover:text-gray-400 focus:text-gray-400 active:text-gray-400"
             id="dark-text-hover"
           >
             Astra Quanta
