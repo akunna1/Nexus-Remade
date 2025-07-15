@@ -5,7 +5,7 @@ import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
 import { FaRegCommentDots } from "react-icons/fa";
 import { RiShareForwardLine } from "react-icons/ri";
 import { BsThreeDots } from "react-icons/bs";
-import Link from 'next/link';  // Correct import for Next.js
+import Link from 'next/link';
 import Comments from './Comments'; // Importing the Comments component
 
 // Define types for comment and post
@@ -57,7 +57,7 @@ const Post: React.FC<PostProps> = ({ post }) => {
             <div className="details">
               <Link
                 href={`/profile/${post.userId}`}
-                className="text-lg font-semibold dark:text-white hover:text-gray-500"
+                className="text-lg font-semibold text-black hover:text-gray-500"
               >
                 {post.name}
               </Link>

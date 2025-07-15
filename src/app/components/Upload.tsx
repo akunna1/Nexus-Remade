@@ -19,29 +19,29 @@ const Upload = () => {
           <input 
             type="text" 
             placeholder="What did you learn at therapy?" 
-            className="flex-1 focus:outline-none bg-white p-2 rounded-md"
+            className="flex-1 focus:outline-none bg-white p-2 rounded-md text-black"
           />
         </div>
 
-        <hr className="my-5" />
+        <hr className="my-5 text-gray-300" />
 
         <div className="flex flex-col sm:flex-row items-center justify-between">
           <div className="flex flex-wrap space-x-4 mb-3 sm:mb-0">
             <div className="flex items-center cursor-pointer space-x-2 hover:text-gray-500">
               <MdPermMedia className="text-red-600" />
-              <span className="text-sm">Media</span>
+              <span className="text-sm text-black hover:text-gray-400" id="dark-text-hover">Media</span>
             </div>
             <div className="flex items-center cursor-pointer space-x-2 hover:text-gray-500">
               <MdLabel className="text-[#034a9c]" />
-              <span className="text-sm">Tags</span>
+              <span className="text-sm text-black hover:text-gray-400" id="dark-text-hover">Tags</span>
             </div>
             <div className="flex items-center cursor-pointer space-x-2 hover:text-gray-500">
               <MdEmojiEmotions className="text-yellow-500" />
-              <span className="text-sm">Emoji</span>
+              <span className="text-sm text-black hover:text-gray-400" id="dark-text-hover">Emoji</span>
             </div>
             <div className="flex items-center cursor-pointer space-x-2 hover:text-gray-500">
               <MdLocationPin className="text-green-600" />
-              <span className="text-sm">Location</span>
+              <span className="text-sm text-black hover:text-gray-400" id="dark-text-hover">Location</span>
             </div>
           </div>
           <button className="bg-green-600 hover:bg-green-800 text-white px-3 py-1 rounded-xl">
