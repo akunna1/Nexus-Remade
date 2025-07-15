@@ -49,16 +49,16 @@ const Navbar2 = () => {
       <div className="flex items-center space-x-4">
         <div onClick={toggleMenu} className="cursor-pointer select-none">
           {isMenuOpen ? (
-            <IoClose size={24} className="hover:text-gray-400" />
+            <IoClose size={24} className="hover:text-gray-400 focus:text-gray-400 active:text-gray-400 cursor-pointer" id="dark-text-hover" />
           ) : (
-            <FaBars size={24} className="hover:text-gray-400" id="dark-text-hover" />
+            <FaBars size={24} className="hover:text-gray-400 focus:text-gray-400 active:text-gray-400 cursor-pointer" id="dark-text-hover" />
           )}
         </div>
 
         <Link href="/home">
           <MdOutlineHome
             size={24}
-            className="hover:text-gray-400 cursor-pointer"
+            className="hover:text-gray-400 focus:text-gray-400 active:text-gray-400 cursor-pointer"
           />
         </Link>
 
@@ -67,19 +67,19 @@ const Navbar2 = () => {
           isDarkMode ? (
             <IoSunnyOutline
               size={24}
-              className="hover:text-gray-400 cursor-pointer"
+              className="hover:text-gray-400 cursor-pointer focus:text-gray-400 active:text-gray-400"
               onClick={toggleTheme}
             />
           ) : (
             <IoMoonOutline
               size={24}
-              className="hover:text-gray-400 cursor-pointer"
+              className="hover:text-gray-400 cursor-pointer focus:text-gray-400 active:text-gray-400"
               onClick={toggleTheme}
             />
           )
         )}
 
-        <BsGrid size={24} className="hover:text-gray-400 cursor-pointer" />
+        <BsGrid size={24} className="hover:text-gray-400 cursor-pointer focus:text-gray-400 active:text-gray-400" />
       </div>
 
       <div className="flex items-center space-x-2">
@@ -90,7 +90,7 @@ const Navbar2 = () => {
             className="w-8 h-8 rounded-full cursor-pointer"
           />
         </Link>
-        <Link href="/profile" className="hover:text-gray-400 cursor-pointer">
+        <Link href="/profile" className="hover:text-gray-400 cursor-pointer focus:text-gray-400 active:text-gray-400">
           Astra Quanta
         </Link>
       </div>
@@ -108,7 +108,7 @@ const Navbar2 = () => {
               <li key={label} className="border-b-2 border-gray-500 pb-2 cursor-pointer">
                 <div className="flex items-center space-x-2">
                   <img src={src} alt={alt} className="w-8 h-8 rounded-full" />
-                  <span className="hover:text-gray-400" id="dark-text-hover">
+                  <span className="hover:text-gray-400 focus:text-gray-400 active:text-gray-400 cursor-pointer" id="dark-text-hover">
                     {label}
                   </span>
                 </div>
@@ -117,7 +117,7 @@ const Navbar2 = () => {
 
             <li className="border-b-2 border-gray-500 pb-2">
               <div
-                className="hover:text-gray-400 cursor-pointer"
+                className="hover:text-gray-400 cursor-pointer focus:text-gray-400 active:text-gray-400"
                 onClick={toggleResourcesMenu}
               >
                 Resources...
@@ -145,7 +145,7 @@ const Navbar2 = () => {
 
             <li>
               <div
-                className="hover:text-gray-400 cursor-pointer"
+                className="hover:text-gray-400 cursor-pointer focus:text-gray-400 active:text-gray-400"
                 onClick={toggleOthersMenu}
               >
                 Others...
