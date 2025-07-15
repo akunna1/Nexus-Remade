@@ -24,15 +24,15 @@ const Rightbar = () => {
                   alt={name}
                   className="w-10 h-10 rounded-full object-cover cursor-pointer"
                 />
-                <span className="font-medium text-black cursor-pointer hover:text-gray-400" id="dark-text-hover">
+                <span className="font-medium text-black cursor-pointer hover:text-gray-400 focus:text-gray-400 active:text-gray-400" id="dark-text-hover">
                   {name}
                 </span>
               </div>
               <div className="flex gap-2 mt-2 xl:mt-0">
-                <button className="px-3 py-1 text-white bg-[#034a9c] hover:bg-[#022f73] rounded-xl">
+                <button className="px-3 py-1 text-white bg-[#034a9c] hover:bg-[#022f73] focus:bg-[#022f73] active:bg-[#022f73] rounded-xl">
                   Follow
                 </button>
-                <button className="px-3 py-1 text-white bg-red-600 hover:bg-[#a00404] rounded-xl">
+                <button className="px-3 py-1 text-white bg-red-600 hover:bg-[#a00404] focus:bg-[#a00404] active:bg-[#a00404]rounded-xl">
                   Dismiss
                 </button>
               </div>
@@ -81,7 +81,7 @@ const Rightbar = () => {
                   className="w-10 h-10 rounded-full object-cover cursor-pointer"
                 />
                 <p>
-                  <span className="font-medium text-black cursor-pointer hover:text-gray-400" id="dark-text-hover">
+                  <span className="font-medium text-black cursor-pointer hover:text-gray-400 focus:text-gray-400 active:text-gray-400" id="dark-text-hover">
                     {name}{" "}
                   </span>
                   <span className="text-gray-500">{action}</span>
@@ -115,7 +115,7 @@ const Rightbar = () => {
                   className="w-10 h-10 rounded-full object-cover cursor-pointer"
                 />
                 <div className="absolute top-0 left-7 w-3 h-3 rounded-full bg-lime-500" />
-                <span className="font-medium text-black cursor-pointer hover:text-gray-400" id="dark-text-hover">
+                <span className="font-medium text-black cursor-pointer hover:text-gray-400 focus:text-gray-400 active:text-gray-400" id="dark-text-hover">
                   {name}
                 </span>
               </div>
