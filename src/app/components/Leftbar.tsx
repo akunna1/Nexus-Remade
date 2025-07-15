@@ -17,7 +17,7 @@ const Leftbar = () => {
             />
           </Link>
           <Link href="/profile">
-            <span className="hidden md:inline text-sm text-black cursor-pointer hover:text-gray-400" id="dark-text-hover">
+            <span className="hidden md:inline text-sm text-black cursor-pointer hover:text-gray-400 focus:text-gray-400 active:text-gray-400" id="dark-text-hover">
               Astra Quanta
             </span>
           </Link>
@@ -33,7 +33,7 @@ const Leftbar = () => {
         ].map(({ src, alt, label }) => (
           <div key={label} className="flex items-center space-x-2">
             <img src={src} alt={alt} className="w-8 h-8 rounded-full cursor-pointer" />
-            <span className="hidden md:inline text-sm text-black cursor-pointer hover:text-gray-400" id="dark-text-hover">
+            <span className="hidden md:inline text-sm text-black cursor-pointer hover:text-gray-400 focus:text-gray-400 active:text-gray-400" id="dark-text-hover">
               {label}
             </span>
           </div>
@@ -51,7 +51,7 @@ const Leftbar = () => {
         ].map(({ src, alt, label }) => (
           <div key={label} className="flex items-center space-x-2">
             <img src={src} alt={alt} className="w-8 h-8 rounded-full cursor-pointer" />
-            <span className="hidden md:inline text-sm text-black cursor-pointer hover:text-gray-400" id="dark-text-hover">
+            <span className="hidden md:inline text-sm text-black cursor-pointer hover:text-gray-400 focus:text-gray-400 active:text-gray-400" id="dark-text-hover">
               {label}
             </span>
           </div>
@@ -68,7 +68,7 @@ const Leftbar = () => {
         ].map(({ src, alt, label }) => (
           <div key={label} className="flex items-center space-x-2">
             <img src={src} alt={alt} className="w-8 h-8 rounded-full cursor-pointer" />
-            <span className="hidden md:inline text-sm text-black cursor-pointer hover:text-gray-400" id="dark-text-hover">
+            <span className="hidden md:inline text-sm text-black cursor-pointer hover:text-gray-400 focus:text-gray-400 active:text-gray-400" id="dark-text-hover">
               {label}
             </span>
           </div>
