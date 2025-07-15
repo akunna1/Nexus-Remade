@@ -69,7 +69,7 @@ const Navbar2 = () => {
 
       {/* Profile */}
       <div className="flex items-center space-x-2">
-        <Link href="/profile/123">
+        <Link href="/profile">
           <img
             src="/photos/cake.jpg"
             alt="User"
@@ -77,7 +77,7 @@ const Navbar2 = () => {
           />
         </Link>
         <Link
-          href="/profile/123"
+          href="/profile"
           className="hover:text-gray-400  cursor-pointer"
         >
           Astra Quanta

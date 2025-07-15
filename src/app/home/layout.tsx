@@ -1,6 +1,4 @@
 import { Metadata } from "next";
-import RootLayout from "../layout"; // Importing the RootLayout
-import { ReactNode } from "react";
 import Navbar from "@/components/Navbar";
 import Leftbar from "@/components/Leftbar";
 import Rightbar from "@/components/Rightbar";

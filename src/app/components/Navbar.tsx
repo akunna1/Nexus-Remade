@@ -108,7 +108,7 @@ const Navbar = () => {
 
         {/* User profile */}
         <div className="hidden lg:flex items-center space-x-2">
-          <Link href="/profile/123">
+          <Link href="/profile">
             <img
               src="/photos/cake.jpg"
               alt="User"
@@ -116,7 +116,7 @@ const Navbar = () => {
             />
           </Link>
           <Link
-            href="/profile/123"
+            href="/profile"
             className="hidden lg:inline cursor-pointer hover:text-gray-400" id="dark-text-hover"
           >
             Astra Quanta

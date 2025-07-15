@@ -9,14 +9,14 @@ const Leftbar = () => {
       <div className="space-y-3 p-5">
         {/* User profile */}
         <div className="flex items-center space-x-2">
-          <Link href="/profile/123">
+          <Link href="/profile">
             <img
               src="/photos/cake.jpg"
               alt="User"
               className="w-8 h-8 rounded-full cursor-pointer"
             />
           </Link>
-          <Link href="/profile/123">
+          <Link href="/profile">
             <span className="hidden md:inline text-sm text-black cursor-pointer hover:text-gray-400" id="dark-text-hover">
               Astra Quanta
             </span>
