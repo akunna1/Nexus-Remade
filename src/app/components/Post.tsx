@@ -5,7 +5,6 @@ import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
 import { FaRegCommentDots } from "react-icons/fa";
 import { RiShareForwardLine } from "react-icons/ri";
 import { BsThreeDots } from "react-icons/bs";
-import Link from 'next/link';
 import Comments from './Comments'; // Importing the Comments component
 
 // Define types for comment and post
@@ -55,12 +54,9 @@ const Post: React.FC<PostProps> = ({ post }) => {
               className="w-10 h-10 rounded-full mr-3 cursor-pointer"
             />
             <div className="details">
-              <Link
-                href={`/profile/${post.userId}`}
-                className="text-lg font-semibold text-black hover:text-gray-500"
-              >
+              <span className="text-lg font-semibold text-black hover:text-gray-500 cursor-pointer" id="dark-text-hover">
                 {post.name}
-              </Link>
+              </span>
               <span className="date text-gray-500 text-sm block">{post.timeAgo}</span>
             </div>
           </div>

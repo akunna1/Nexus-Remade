@@ -41,7 +41,7 @@ const Comments: React.FC<CommentsProps> = ({ comments }) => {
             className="w-10 h-10 rounded-full cursor-pointer"
           />
           <div className="bg-gray-100 p-3 rounded-md flex-1">
-            <span className="font-semibold cursor-pointer text-black">
+            <span className="font-semibold cursor-pointer text-black hover:text-gray-400" id="dark-text-hover">
               {comment.name}
             </span>
             <p className="text-sm text-black">{comment.desc}</p>
