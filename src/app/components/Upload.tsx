@@ -9,7 +9,7 @@ const Upload = () => {
     <div className="w-full bg-white mt-3 mb-5 p-4 rounded-xl shadow-xl">
       <div className="flex flex-col space-y-3">
         <div className="flex items-center">
-          <Link href="/profile/yourUserId">
+          <Link href="/profile">
             <img 
               src="/photos/cake.jpg" 
               alt="User profile picture" 
