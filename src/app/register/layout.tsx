@@ -5,7 +5,7 @@ import Scroll from "../components/Scroll"; // Scroll to top
 
 // Overridding metadata for this specific page
 export const metadata: Metadata = {
-  title: "Nexus | Login", // Page-specific title
+  title: "Nexus | Register ", // Page-specific title
 };
 
 export default function UseStateLayout({ children }: { children: ReactNode }) {
