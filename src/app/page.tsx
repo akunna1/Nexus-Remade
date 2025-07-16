@@ -45,6 +45,7 @@ const Register = () => {
   return (
     <div className="min-h-screen bg-gradient-to-l from-gray-800 via-gray-900 to-black flex items-center justify-center px-4">
       <div className="bg-transparent p-6 md:flex md:flex-row flex-col max-w-screen-lg mx-auto rounded-2xl shadow-xl w-full">
+         {/* Column 1 */}
         <div className="w-full md:flex-1 p-6 bg-[#f5f5f5] rounded-xl shadow-md mb-6 md:mb-0 md:mr-6 flex flex-col justify-center">
           <p className="text-5xl font-bold mb-6 text-[#034a9c]">Nexus</p>
           <p className="text-[#2d2d2d] text-lg mb-4 text-left">
@@ -58,7 +59,8 @@ const Register = () => {
           </Link>
         </div>
 
-        <div className="w-full md:flex-1 bg-white shadow-lg rounded-2xl p-6 flex flex-col">
+        {/* Column 2 */}
+        <div className="w-full md:flex-1 bg-white dark:bg-white shadow-lg rounded-2xl p-6 flex flex-col">
           <form className="flex flex-col" onSubmit={handleSubmit}>
             <input
               type="text"

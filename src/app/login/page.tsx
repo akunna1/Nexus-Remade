@@ -51,7 +51,7 @@ const Login = () => {
         </div>
 
         {/* Column 2 */}
-        <div className="w-full md:flex-1 bg-white shadow-lg rounded-2xl p-6 flex flex-col">
+        <div className="w-full md:flex-1 bg-white dark:bg-white shadow-lg rounded-2xl p-6 flex flex-col">
           <form className="flex flex-col" onSubmit={handleSubmit}>
             <input
               type="email"
