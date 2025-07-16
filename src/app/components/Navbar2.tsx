@@ -160,7 +160,7 @@ const Navbar2 = () => {
                     <li key={label} className="cursor-pointer">
                       <div className="flex items-center space-x-2">
                         <img src={src} alt={alt} className="w-8 h-8 rounded-full" />
-                        <span className="hover:text-gray-400" id="dark-text-hover">
+                        <span className="hover:text-gray-400 focus:text-gray-400 active:text-gray-400" id="dark-text-hover">
                           {label}
                         </span>
                       </div>
