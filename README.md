@@ -5,7 +5,7 @@
 - profile page: [profile] + [posts]
 
 
-#### Login details:
+#### Login details
 - firstname: Astra
 - lastname: Quanta
 - email: astraquanta1@gmail.com
