@@ -28,7 +28,7 @@ Nexus is a responsive therapy alternative social platform where users can upload
 
 ### Layout Components
 
-* **Navbar** & **Navbar2** — navigation bars with theme toggle and menu
+* **Navbar** & **Navbar2** — navigation bars with theme toggle and menu (navbar2 is available only on sm and md screens)
 * **Leftbar** & **Rightbar** — sidebars with additional navigation or info
 * **Upload** — upload interface for new posts
 * **Profile** — user profile display and edit page
