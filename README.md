@@ -1,4 +1,4 @@
-# Nexus Social Media App 📱✨
+# Nexus Social Media App 🤳🏾
 
 A modern social media application built with **Next.js**, **Supabase**, and **Tailwind CSS**.
 
